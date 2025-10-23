@@ -1,8 +1,13 @@
 import react from "react";
 import "./App.css";
+import Routers from "./Routers";
 
 function App() {
-  return <>minahil</>;
+  return (
+    <>
+      <Routers/>
+    </>
+  );
 }
 
 export default App;

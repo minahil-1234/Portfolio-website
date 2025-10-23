@@ -1,0 +1,23 @@
+.social-link::after {
+  content: "";
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 100px !important;
+  background: #FF014F !important;
+  opacity: 0.06 !important;
+  transform: scale(0) !important;
+  transition: all 0.4s ease !important;
+  z-index: -1 !important;
+}
+
+.social-link {
+  position: relative;
+  overflow: visible;
+}
+
+
+.social-link:hover::after {
+  transform: scale(1) !important;
+  opacity: 0.5 !important;
+}
