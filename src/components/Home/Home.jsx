@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import bannerImg from "../../assets/banner.png";
+import { motion } from "framer-motion";
 import cvFile from "../../assets/Minahil-CV.pdf";
-import "./Home.css";
 import Button from "../Button/Button";
 
 const Home = () => {
@@ -13,25 +12,15 @@ const Home = () => {
 
   useEffect(() => {
     let timer;
-
     if (!isDeleting && text !== fullText) {
-      // ⌨️ Typing letters
-      timer = setTimeout(() => {
-        setText(fullText.slice(0, text.length + 1));
-      }, typingSpeed);
+      timer = setTimeout(() => setText(fullText.slice(0, text.length + 1)), typingSpeed);
     } else if (isDeleting && text !== "") {
-      // ❌ Deleting letters
-      timer = setTimeout(() => {
-        setText(fullText.slice(0, text.length - 1));
-      }, deletingSpeed);
+      timer = setTimeout(() => setText(fullText.slice(0, text.length - 1)), deletingSpeed);
     } else if (text === fullText) {
-      // ⏸ Pause before deleting
       timer = setTimeout(() => setIsDeleting(true), 2000);
     } else if (text === "") {
-      // ♻️ Restart typing
       setIsDeleting(false);
     }
-
     return () => clearTimeout(timer);
   }, [text, isDeleting]);
 
@@ -43,36 +32,59 @@ const Home = () => {
   };
 
   return (
-    <div className="container">
-      <div className="flex justify-center items-center md:flex-nowrap flex-wrap gap-5 h-screen bg-black overflow-hidden">
-        <div className=" md:w-1/2 w-full">
-          <div className="rajdhani text-5xl font-bold text-white ">
-            I am a <br />
-            <span className="text-[#ff004f] typewriter">
-              {text}
-              <span className="cursor">|</span>
-            </span>
-          </div>
-          <p className="text-white text-xl max-w-[500px] mb-5">
-            Building elegant, user-friendly interfaces with clean code, modern
-            aesthetics, and a focus on performance and accessibility.
-          </p>
-          <Button className="ml-2" onClick={handleDownloadCV}>
-            Download my CV
+    <section
+      id="home"
+      className="relative pb-20 pt-40 flex flex-col items-center justify-center text-white overflow-hidden px-6"
+    >
+      <motion.div
+        className="text-center"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
+        <motion.h1
+          className="text-4xl md:text-6xl font-bold rajdhani leading-tight"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+        >
+          Hi, I'm <span className="text-[#ff014f]">Minahil Afzaal</span>
+        </motion.h1>
+
+        <motion.h2
+          className="text-3xl md:text-3xl font-semibold text-gray-300 mb-3"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+        >
+          {text}
+          <span className="text-[#ff014f]">|</span>
+        </motion.h2>
+
+        <motion.p
+          className="text-[#9f9f9f] rubik text-lg max-w-[600px] mx-auto mb-8"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
+        >
+          I craft modern, interactive, and responsive web interfaces using React and Tailwind CSS — transforming ideas into elegant user experiences.
+        </motion.p>
+
+        <motion.div
+          className="flex items-center justify-center gap-4"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+        >
+          <Button
+            onClick={handleDownloadCV}
+            className="hover:scale-105 transition-transform duration-300"
+          >
+            Download CV
           </Button>
-        </div>
-        <div className="relative flex justify-center items-center md:w-1/2 w-full">
-          <div className="absolute w-[300px] h-[300px] rounded-full bg-[#ffffff]/60 animate-pulse1"></div>
-          <div className="absolute w-[400px] h-[400px] rounded-full bg-[#0000004d]/85 animate-pulse2"></div>
-          <div className="absolute w-[450px] h-[450px] rounded-full bg-[#ffffff]/50 animate-pulse3"></div>
-          <img
-            src={bannerImg}
-            alt="Banner"
-            className="relative w-[350px] h-[350px] rounded-full object-cover border-[3px] border-[#111]"
-          />
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </section>
   );
 };
 

@@ -11,7 +11,7 @@ const Button = ({
   ...rest
 }) => {
   const baseStyles =
-    "relative overflow-hidden whitespace-nowrap px-8 py-3 rounded-[8px] font-semibold text-base transition-all duration-300 flex items-center justify-center cursor-pointer group";
+    "relative overflow-hidden whitespace-nowrap px-8 py-3 rubik rounded-[8px] font-semibold text-base transition-all duration-300 flex items-center justify-center cursor-pointer group";
 
   const variants = {
     defaultBtn:

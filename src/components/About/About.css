@@ -1,0 +1,15 @@
+.AboutMe {
+  position: relative;
+}
+.AboutMe::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 197px;
+  background: linear-gradient(0deg, rgba(255, 1, 79, 0) 15.49%, #ff014f 100%);
+  filter: blur(2px);
+  border-radius: 100%;
+  width: 410px;
+  height: 410px;
+  z-index: -1;
+}

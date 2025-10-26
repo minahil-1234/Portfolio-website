@@ -15,6 +15,10 @@ body {
 .rubik_font {
   font-family: "Rubik", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 @keyframes pulse1 {
   0% {
     transform: scale(1);
@@ -43,7 +47,7 @@ body {
     opacity: 0.4;
   }
   100% {
-    transform: scale(1.5);
+    transform: scale(1.2);
     opacity: 0;
   }
 }
@@ -58,4 +62,58 @@ body {
 
 .animate-pulse3 {
   animation: pulse3 3s ease-out infinite 2s;
+}
+/* === Hover Border Gradient Effect (Perfect Corners) === */
+.hover-border {
+  position: relative;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Base for both borders */
+.hover-border::before,
+.hover-border::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, #ff014f, #ff5e62);
+  opacity: 0;
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+/* Top border */
+.hover-border::before {
+  top: -1px;       /* extend slightly above */
+  left: -1px;      /* extend slightly left */
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, #ff014f, #ff5e62);
+  /* border-top-left-radius: 15px; */
+}
+
+/* Left border */
+.hover-border::after {
+  top: -1px;       /* extend slightly above */
+  left: -1px;      /* extend slightly left */
+  width: 2px;
+  height: 0;
+  background: linear-gradient(180deg, #ff014f, #ff5e62);
+  /* border-top-left-radius: 30px; */
+}
+
+/* Animate on hover */
+.hover-border:hover::before {
+  width: calc(100% + 10px); /* extend to cover the curve */
+  opacity: 1;
+}
+
+.hover-border:hover::after {
+  height: calc(100% + 2px);
+  opacity: 1;
+}
+
+/* Glow effect */
+.hover-border:hover {
+  box-shadow: 0 0 15px rgba(255, 0, 76, 0.4);
 }
