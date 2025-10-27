@@ -4,6 +4,7 @@
 
 body {
   background-color: #060606;
+  padding: 0px 10px;
 }
 .container {
   max-width: 1170px;
@@ -63,7 +64,6 @@ html {
 .animate-pulse3 {
   animation: pulse3 3s ease-out infinite 2s;
 }
-/* === Hover Border Gradient Effect (Perfect Corners) === */
 .hover-border {
   position: relative;
   border-radius: 6px;
@@ -71,7 +71,6 @@ html {
   overflow: hidden;
 }
 
-/* Base for both borders */
 .hover-border::before,
 .hover-border::after {
   content: "";
@@ -82,29 +81,24 @@ html {
   pointer-events: none;
 }
 
-/* Top border */
-.hover-border::before {
-  top: -1px;       /* extend slightly above */
-  left: -1px;      /* extend slightly left */
+=.hover-border::before {
+  top: -1px;      
+  left: -1px;      
   height: 2px;
   width: 0;
   background: linear-gradient(90deg, #ff014f, #ff5e62);
-  /* border-top-left-radius: 15px; */
 }
 
-/* Left border */
 .hover-border::after {
-  top: -1px;       /* extend slightly above */
-  left: -1px;      /* extend slightly left */
+  top: -1px;       
+  left: -1px;     
   width: 2px;
   height: 0;
   background: linear-gradient(180deg, #ff014f, #ff5e62);
-  /* border-top-left-radius: 30px; */
 }
 
-/* Animate on hover */
 .hover-border:hover::before {
-  width: calc(100% + 10px); /* extend to cover the curve */
+  width: calc(100% + 10px); 
   opacity: 1;
 }
 
@@ -113,7 +107,6 @@ html {
   opacity: 1;
 }
 
-/* Glow effect */
 .hover-border:hover {
   box-shadow: 0 0 15px rgba(255, 0, 76, 0.4);
 }

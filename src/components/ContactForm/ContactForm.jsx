@@ -26,7 +26,7 @@ const ContactForm = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="container bg-[#141414] border hover-border border-transparent rounded-[20px] px-9 py-10"
+        className="container bg-[#141414] border hover-border border-transparent rounded-[20px] md:px-9 px-5 md:py-10 py-6"
       >
         <motion.h2
           initial={{ opacity: 0, y: -30 }}

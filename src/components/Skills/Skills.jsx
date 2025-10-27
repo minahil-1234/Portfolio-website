@@ -12,7 +12,7 @@ const skillsData = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-16 bg-[#0a0a0a]">
+    <section id="skills" className="lg:py-16 pt-5 pb-10 bg-[#0a0a0a]">
       <div className="container mx-auto px-6">
         {/* Heading */}
         <motion.h2
@@ -20,7 +20,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-6xl font-bold text-center text-white mb-3 rajdhani"
+          className="md:text-6xl text-4xl font-bold text-center text-white mb-3 rajdhani"
         >
           My <span className="text-[#ff014f]">Skills</span>
         </motion.h2>
@@ -30,7 +30,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-base max-w-[600px] mx-auto mb-10 text-center text-[#9f9f9f]"
+          className="text-base md:max-w-[600px]  mx-auto mb-10 text-center text-[#9f9f9f]"
         >
           Skilled in developing high-quality, responsive web applications using
           React, Tailwind CSS, and API integrations. Experienced in creating

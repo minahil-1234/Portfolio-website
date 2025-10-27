@@ -40,7 +40,7 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: index * 0.2, // stagger cards
+      delay: index * 0.2, 
       duration: 0.6,
       ease: "easeOut",
     },
@@ -49,9 +49,8 @@ const cardVariants = {
 
 const Services = () => {
   return (
-    <section id="services" className="py-16">
+    <section id="services" className="lg:py-16 pt-5 pb-10">
       <div className="container">
-        {/* Heading Section */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -77,10 +76,10 @@ const Services = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="bg-[#141414] w-[48%] border hover-border border-transparent rounded-[20px] px-9 py-10"
+              className="bg-[#141414] md:w-[48%] w-full border hover-border border-transparent rounded-[20px] md:px-9 px-5 md:py-10 py-5"
             >
               <div className="flex">
-                <h2 className="text-2xl text-white rajdhani font-bold mb-4 mr-3">
+                <h2 className="md:text-2xl text-xl whitespace-nowrap text-white rajdhani font-bold mb-4 mr-3">
                   {item.no}
                 </h2>
                 <h2 className="text-2xl text-white rajdhani font-bold mb-4">

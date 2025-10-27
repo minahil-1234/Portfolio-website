@@ -40,7 +40,7 @@ const cardVariants = {
 
 const PortfolioCard = () => {
   return (
-    <div className="flex justify-center gap-8">
+    <div className="flex md:flex-nowrap flex-wrap justify-center gap-8">
       {projects.map((project, index) => (
         <motion.div
           key={project.id}
@@ -73,7 +73,7 @@ const PortfolioCard = () => {
               whileHover={{ scale: 1.1, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => window.open(project.link, "_blank")}
-              className="absolute bottom-0 mb-5 right-5 bg-white/70 text-[#ff014f] hover:bg-[#ff014f] hover:text-white p-3 rounded-lg transition"
+              className="absolute bottom-0 mb-15 right-5 bg-white/70 text-[#ff014f] hover:bg-[#ff014f] hover:text-white p-3 rounded-lg transition"
             >
               <FiArrowUpRight size={28} />
             </motion.button>

@@ -37,7 +37,7 @@ const cardVariant = {
 
 const Resume = () => {
   return (
-    <section className="py-16" id="resume">
+    <section className="lg:py-16 pt-5 pb-10" id="resume">
       <div className="container">
         {/* Section Heading */}
         <motion.div
@@ -65,7 +65,7 @@ const Resume = () => {
         >
           <motion.h2
             variants={cardVariant}
-            className="rajdhani text-[32px] mb-6 text-white font-bold"
+            className="rajdhani text-[32px] lg:mb-6 mb-0 text-white font-bold"
           >
             Education
           </motion.h2>
@@ -78,7 +78,7 @@ const Resume = () => {
               <motion.div
                 key={index}
                 variants={cardVariant}
-                className="bg-[#141414] w-[48%] border hover-border border-transparent rounded-[20px] px-9 py-10"
+                className="bg-[#141414] md:w-[48%] w-full border hover-border border-transparent rounded-[20px] md:px-9 px-5 md:py-10 py-6"
               >
                 <h2 className="text-xl text-[#ff014f] rajdhani font-semibold mb-2">
                   {item.year}
@@ -104,7 +104,7 @@ const Resume = () => {
           <h2 className="rajdhani text-[32px] mb-2 text-white font-bold">
             Experience
           </h2>
-          <div className="bg-[#141414] border hover-border border-transparent rounded-[20px] px-9 py-10">
+          <div className="bg-[#141414] border hover-border border-transparent rounded-[20px] md:px-9 px-5 md:py-10 py-6">
             <p className="text-base rubik font-normal text-[#9f9f9f]">
               During my role as a Frontend Developer at Odoo, I contributed to
               designing and developing custom modules and responsive user
