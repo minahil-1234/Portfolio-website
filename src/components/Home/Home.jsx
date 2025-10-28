@@ -34,7 +34,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="relative  h-screen flex flex-col items-center justify-center text-white overflow-hidden px-6"
+      className="relative md:h-screen md:pb-0 md:py-0 py-5 pb-10 flex flex-col items-center justify-center text-white overflow-hidden px-6"
     >
       <motion.div
         className="text-center"
