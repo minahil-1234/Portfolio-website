@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import cvFile from "../../assets/Minahil-CV.pdf";
+import cvFile from "../../assets/MinahilCV.pdf";
 import Button from "../Button/Button";
 
 const Home = () => {
@@ -27,7 +27,7 @@ const Home = () => {
   const handleDownloadCV = () => {
     const link = document.createElement("a");
     link.href = cvFile;
-    link.download = "Minahil-CV.pdf";
+    link.download = "MinahilCV.pdf";
     link.click();
   };
 
