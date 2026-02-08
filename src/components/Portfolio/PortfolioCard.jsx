@@ -8,24 +8,24 @@ import { motion } from "framer-motion";
 const projects = [
   {
     id: 1,
-    title: "A Showcase of My Projects",
-    category: "Development",
-    image: aboutus,
-    // link: "https://skypassholiday.com/",
-  },
-  {
-    id: 2,
     title: "Creative Web Experience",
     category: "UI/UX Design",
     image: departed,
     link: "https://phpstack-1250693-5581655.cloudwaysapps.com/home",
   },
   {
-    id: 3,
+    id: 2,
     title: "Interactive Dashboard",
     category: "Frontend Development",
     image: dashboard,
     link: "https://phpstack-1250693-5581655.cloudwaysapps.com/web-dashboard",
+  },
+   {
+    id: 3,
+    title: "A Showcase of My Projects",
+    category: "Development",
+    image: aboutus,
+    // link: "https://skypassholiday.com/",
   },
 ];
 
