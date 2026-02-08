@@ -106,12 +106,12 @@ const Resume = () => {
           </h2>
           <div className="bg-[#141414] border hover-border border-transparent rounded-[20px] md:px-9 px-5 md:py-10 py-6">
             <p className="text-base rubik font-normal text-[#9f9f9f]">
-              During my role as a Frontend Developer at Odoo, I contributed to
+              During my role as a Frontend Developer at Yodo, I contributed to
               designing and developing custom modules and responsive user
               interfaces within the Odoo ERP environment. My focus was on
               creating smooth, interactive web experiences using modern frontend
               technologies like React.js, Tailwind CSS, and JavaScript, while
-              integrating them with Odoo’s backend framework.
+              integrating them with Yodo’s backend framework.
             </p>
           </div>
         </motion.div>
