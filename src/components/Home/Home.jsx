@@ -77,7 +77,7 @@ const Home = () => {
           transition={{ delay: 0.8, duration: 0.8 }}
         >
           <Button
-            onClick={handleDownloadCV}
+            // onClick={handleDownloadCV}
             className="hover:scale-105 transition-transform duration-300"
           >
             Download CV
