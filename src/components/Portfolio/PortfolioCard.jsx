@@ -25,7 +25,6 @@ const projects = [
     title: "A Showcase of My Projects",
     category: "Development",
     image: aboutus,
-    // link: "https://skypassholiday.com/",
   },
 ];
 
