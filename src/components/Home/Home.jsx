@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import cvFile from "../../assets/MinahilCV.pdf";
+import cvFile from "../../assets/MinahilAfzaal.pdf";
 import Button from "../Button/Button";
 
 const Home = () => {
@@ -77,7 +77,7 @@ const Home = () => {
           transition={{ delay: 0.8, duration: 0.8 }}
         >
           <Button
-            // onClick={handleDownloadCV}
+            onClick={handleDownloadCV}
             className="hover:scale-105 transition-transform duration-300"
           >
             Download CV
